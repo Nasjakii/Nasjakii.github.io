@@ -62,7 +62,7 @@ wss.on("connection", function (socket) {
   console.log("Client connected");
 
   socket.on("message", function (msg) {
-    if (0) console.log("< " + String(msg));
+    if (true) console.log("< " + String(msg));
 
     if (isJson(msg)) {
       data = JSON.parse(msg);
