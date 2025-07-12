@@ -1,6 +1,6 @@
 console.log("Server started");
 
-const WebSocket = require("ws"); // Use ws for WebSocket
+const WebSocket = require("wss"); // Use ws for WebSocket
 const http = require("http");
 
 //const server = new WebSocket.Server({ port: 8080 });
