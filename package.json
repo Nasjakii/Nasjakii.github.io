@@ -1,0 +1,26 @@
+{
+  "name": "grid-server-gms2",
+  "main": "server.js",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "https://glitch.com/edit/#!/grid-server-gms2"
+  },
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
