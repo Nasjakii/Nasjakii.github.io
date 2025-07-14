@@ -108,7 +108,8 @@ wss.on("connection", function (socket) {
           break;
         case msgType.PING:
           //console.log("Ping");
-          share_data(data, socket, true);
+          socket.send(JSON.stringify(data)); //send to self even if not in lobby
+          share_data(data, socket, false); //send to everyone - just possible when in lobby
           break;
         case msgType.TEAM_NUMBER:
           share_data(data, socket, true);
