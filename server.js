@@ -108,7 +108,7 @@ wss.on("connection", function (socket) {
           break;
         case msgType.PING:
           //console.log("Ping");
-          socket.send(JSON.stringify(data));
+          share_data(data, socket, true);
           break;
         case msgType.TEAM_NUMBER:
           share_data(data, socket, true);
