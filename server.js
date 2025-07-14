@@ -265,15 +265,14 @@ function disconnect_client(data, socket) {
 function share_data(data, socket, self, debug = false) {
   try {
     
-    var start = 0;
-    if (self == false) start = 1;
     if (typeof hosts[data.lobbyNumber] == "undefined") {
       console.log("Host undefined in share_data");
       console.log(data);
       return false; //error
     }
 
-    for (var i = start; i < hosts[data.lobbyNumber].length; i++) {
+    for (var i = 0; i < hosts[data.lobbyNumber].length; i++) {
+      if (self == false && i == data.playerNumber) continue;
       hosts[data.lobbyNumber][i].socket.send(JSON.stringify(data));
     }
     if (debug) {
