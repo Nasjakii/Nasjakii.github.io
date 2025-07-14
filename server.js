@@ -3,6 +3,8 @@ console.log("Server started");
 const WebSocket = require("ws"); // Use ws for WebSocket
 const http = require("http");
 
+
+const port = process.env.PORT;
 //const server = new WebSocket.Server({ port: 8080 });
 
 const server = http
@@ -11,7 +13,7 @@ const server = http
     res.write("This is just a server");
     res.end();
   })
-  .listen(8080);
+  .listen(port);
 // pass the created server to ws
 const wss = new WebSocket.Server({ server });
 
