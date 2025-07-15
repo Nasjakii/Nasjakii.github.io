@@ -264,7 +264,8 @@ function disconnect_client(data, socket) {
 
 function share_data(data, socket, self, debug = false) {
   try {
-    
+    if (data.lobbyNumber == -1) return false; //when player in menu e.g.
+
     if (typeof hosts[data.lobbyNumber] == "undefined") {
       console.log("Host undefined in share_data");
       console.log(data);
